@@ -3,7 +3,9 @@ class BankAccount {
   double balance;
 
   BankAccount(this.accountID, this.balance);
-  BankAccount.initAccount(String accountID) : this(accountID, 0);
+  BankAccount.initAccount(String accountID)
+      : this.accountID = accountID,
+        this.balance = 0;
 
   void withdraw(double amount) {
     if (amount <= 0) {
