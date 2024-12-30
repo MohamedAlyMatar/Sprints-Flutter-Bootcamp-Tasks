@@ -33,3 +33,46 @@ This is a `StatefulWidget` that contains the main UI of the app. The widget is c
 
 ### Sample Output  
 ![Alt Text](r-output.png)
+
+<br>
+<br>
+<br>
+
+# Updates for sign up page task
+
+Added a **Sign In Screen** for the Xiaomi Shopping App. Implementing the functionality for user input validation, password visibility toggle, and navigation to the home page upon successful sign-in.
+
+## Features
+
+- **User Input Fields**: 
+  - Full Name
+  - Email
+  - Password
+  - Confirm Password
+- **Form Validation**:
+  - Full Name must be capitalized.
+  - Email must be a valid email format.
+  - Password must be at least 8 characters.
+  - Password confirmation must match the password.
+- **Password Visibility Toggle**:
+  - Show or hide the password using a visibility icon.
+- **Success Dialog**:
+  - Displays a welcome message on successful sign-in.
+  - Navigates to the home page.
+
+## UI Components
+- **Form Fields**:
+  - Custom validation for each input field.
+  - Icons for better visual representation.
+- **Button**:
+  - "Sign in" button to submit the form.
+
+## Navigation
+- Successful sign-in triggers:
+  1. A dialog box with a success message.
+  2. Navigation to the `MyHomePage` (home screen).
+
+
+### Sample Output  
+![Alt Text](r2-output.png)
+![Alt Text](r3-output.png)
