@@ -38,7 +38,7 @@ This is a `StatefulWidget` that contains the main UI of the app. The widget is c
 <br>
 <br>
 
-# Updates for sign up page task
+# Updates: for sign up page task
 
 Added a **Sign In Screen** for the Xiaomi Shopping App. Implementing the functionality for user input validation, password visibility toggle, and navigation to the home page upon successful sign-in.
 
@@ -75,4 +75,14 @@ Added a **Sign In Screen** for the Xiaomi Shopping App. Implementing the functio
 
 ### Sample Output  
 ![Alt Text](r2-output.png)
+
+<br>
+
 ![Alt Text](r3-output.png)
+
+<br>
+<br>
+
+# Updates: added page fade-animation from sign-in to home page
+### I used the package "page_transition" to add the fade animation in the navigator - <br> Click below and Check it out
+[Page Animation Video](PageAnimation.mp4)

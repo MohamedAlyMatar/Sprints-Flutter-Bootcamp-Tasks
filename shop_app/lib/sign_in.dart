@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:shop_app/home_page.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -35,8 +36,10 @@ class _SignInScreenState extends State<SignInScreen> {
                 Navigator.pop(context);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const MyHomePage(),
+                  PageTransition(
+                    type: PageTransitionType.fade,
+                    duration: Durations.extralong2,
+                    child: MyHomePage(),
                   ),
                 );
               },
