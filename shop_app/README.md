@@ -86,3 +86,10 @@ Added a **Sign In Screen** for the Xiaomi Shopping App. Implementing the functio
 # Updates: added page fade-animation from sign-in to home page
 ### I used the package "page_transition" to add the fade animation in the navigator - <br> Click below and Check it out
 [Page Animation Video](PageAnimation.mp4)
+
+<br>
+<br>
+
+# Updates: added Localization
+### I used the package "easy_localization" to add localization to my app
+added a language button on the app bar which opens a dialog to choose between languages to apply to the app

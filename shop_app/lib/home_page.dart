@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:shop_app/grid_item.dart';
 import 'package:shop_app/text_title.dart';
@@ -25,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Colors.deepOrange,
         centerTitle: true,
-        title: const Text("Xiaomi Shopping App"),
+        title: Text(context.tr("Xiaomi_Shopping_App")),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -34,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               textTitle(
-                'Our Products',
+                context.tr("our_products"),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height / 3,
@@ -79,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                 ),
               ),
-              textTitle("HOT OFFERS"),
+              textTitle(context.tr("hot_offers")),
               SizedBox(
                 height: MediaQuery.of(context).size.height / 2,
                 child: ListView.builder(

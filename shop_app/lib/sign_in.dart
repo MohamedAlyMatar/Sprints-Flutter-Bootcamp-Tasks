@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:shop_app/home_page.dart';
+import 'package:shop_app/lang_dialog.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -57,7 +59,15 @@ class _SignInScreenState extends State<SignInScreen> {
         appBar: AppBar(
           backgroundColor: Colors.deepOrange,
           centerTitle: true,
-          title: const Text("Xiaomi Shopping App - Sign in"),
+          title: Text(context.tr("Xiaomi_Shopping_App")),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.language),
+              onPressed: () {
+                langDialog(context);
+              },
+            ),
+          ],
         ),
         body: SingleChildScrollView(
           child: Form(
@@ -71,10 +81,10 @@ class _SignInScreenState extends State<SignInScreen> {
                   const SizedBox(height: 30),
                   TextFormField(
                     controller: FullNameController,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       icon: Icon(Icons.person),
                       border: OutlineInputBorder(),
-                      labelText: 'Full Name',
+                      labelText: context.tr("full_name"),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -90,10 +100,10 @@ class _SignInScreenState extends State<SignInScreen> {
                   const SizedBox(height: 20),
                   TextFormField(
                     controller: EmailController,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       icon: Icon(Icons.email),
                       border: OutlineInputBorder(),
-                      labelText: 'Email',
+                      labelText: context.tr("email"),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -111,7 +121,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     decoration: InputDecoration(
                         icon: Icon(Icons.lock),
                         border: OutlineInputBorder(),
-                        labelText: 'Password',
+                        labelText: context.tr("password"),
                         suffixIcon: IconButton(
                           onPressed: () {
                             switchVisibility();
@@ -137,7 +147,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     decoration: InputDecoration(
                         icon: Icon(Icons.lock_outlined),
                         border: OutlineInputBorder(),
-                        labelText: 'Confirm Password',
+                        labelText: context.tr("confirm_password"),
                         suffixIcon: IconButton(
                           onPressed: () {
                             switchVisibility();
@@ -169,7 +179,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           );
                         }
                       },
-                      child: const Text("Sign in")),
+                      child: Text(context.tr("sign_in"))),
                 ],
               ),
             ),
